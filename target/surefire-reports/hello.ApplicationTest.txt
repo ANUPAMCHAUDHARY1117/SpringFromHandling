@@ -1,0 +1,27 @@
+-------------------------------------------------------------------------------
+Test set: hello.ApplicationTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 5.556 sec <<< FAILURE! - in hello.ApplicationTest
+submitsForm(hello.ApplicationTest)  Time elapsed: 0.067 sec  <<< FAILURE!
+java.lang.AssertionError: Response content
+Expected: a string containing "firstName: Mark"
+     but: was "<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Result</h1>
+    <p>id: 12345</p>
+    <p>First Name Mark</p>
+    <p>Last Namenull</p>
+    <a href="/greeting">Submit another message</a>
+</body>
+</html>"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.springframework.test.web.servlet.result.ContentResultMatchers$4.match(ContentResultMatchers.java:137)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:171)
+	at hello.ApplicationTest.submitsForm(ApplicationTest.java:49)
+
